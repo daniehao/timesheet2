@@ -36,10 +36,10 @@ class Manager extends React.Component {
     let {session, manager} = this.props;
     let user_name = session.user_name;
     let email = session.email;
-    if (manager.email == '' || manager.email != email){
-      console.log("getting manager");
-      get_manager_with_workers(email);
-    }
+//    if (manager.email == '' || manager.email != email){
+//      console.log("getting manager");
+    get_manager_with_workers(email);
+//    }
     let workers = manager.workers;
     
     let itemsList = workers.map((worker) => {

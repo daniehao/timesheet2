@@ -44,10 +44,10 @@ class Worker extends React.Component {
     let {session, worker} = this.props;
     let user_name = session.user_name;
     let email = session.email;
-    if (worker.email == '' || worker.email != email){
-      console.log("getting worker");
+ //   if (worker.email == '' || worker.email != email){
+ //     console.log("getting worker");
       get_worker_with_timesheets(email);
-    }
+  //  }
     let timesheets = worker.timesheets;
     let listItems = timesheets.map((timesheet) => <tr><td>{timesheet.date}</td>
 	  <td>{timesheet.status}</td>

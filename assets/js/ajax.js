@@ -145,7 +145,7 @@ export function delete_timesheet(id) {
 export function update_timesheet(id, attr, form){
   let state = store.getState();
   console.log("updating timesheet");
-  post('/timesheeets/update', {
+  post('/timesheets/update', {
 	 id: id,
 	 timesheet: attr,
          }).then((resp) => {
@@ -155,13 +155,6 @@ export function update_timesheet(id, attr, form){
 		 }
                form.redirect("/");
 	 });
-//  get('/timesheets/approve/'+id).then((resp) => {
-//		 console.log(resp);
-//		 if (resp.data) {
-//		   get_manager_with_workers(state.session.email);
-//		 }
-//                 form.redirect("/");
-//	 });
 
 }
 

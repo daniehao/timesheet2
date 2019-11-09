@@ -41,10 +41,10 @@ class TimesheetShow extends React.Component {
     }
     
     let {id, timesheet, is_manager} = this.props;
-    if (timesheet.id != id){
-      console.log("getting timesheet");
+//    if (timesheet.id != id){
+//      console.log("getting timesheet");
       get_timesheet(id);
-    }
+//    }
     let approve = <div></div>;
     if (is_manager && timesheet.status == "Waiting"){
       approve = <button type="button" className = "btn btn-primary" onClick={this.handleApprove.bind(this)}>Approve</button>
